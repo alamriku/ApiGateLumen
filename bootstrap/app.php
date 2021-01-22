@@ -27,6 +27,10 @@ $app = new Laravel\Lumen\Application(
 
  $app->withEloquent();
 
+
+//    Registering config files
+        $app->configure('services');
+
 /*
 |--------------------------------------------------------------------------
 | Register Container Bindings
