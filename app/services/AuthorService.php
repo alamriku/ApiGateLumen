@@ -22,4 +22,9 @@ class AuthorService
     {
         return $this->performRequest('GET', '/authors');
     }
+    // create a single author from the other service
+    public function createAuthor($data)
+    {
+        return $this->performRequest('POST', '/authors', $data);
+    }
 }
