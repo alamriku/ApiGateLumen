@@ -16,4 +16,10 @@ class AuthorService
     {
         $this->baseUri = config('services.authors.base_uri');
     }
+
+    // obtain full list of authors from the other service
+    public function obtainAuthors()
+    {
+        return $this->performRequest('GET', '/authors');
+    }
 }
