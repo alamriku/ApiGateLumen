@@ -30,6 +30,9 @@ $app = new \Dusterio\LumenPassport\Lumen7Application(
 //    Registering config files
         $app->configure('services');
 
+        //registering auth file
+$app->configure('auth');
+
 /*
 |--------------------------------------------------------------------------
 | Register Container Bindings
@@ -63,7 +66,7 @@ $app->singleton(
 */
 
 $app->configure('app');
-$app->configure('auth');
+
 /*
 |--------------------------------------------------------------------------
 | Register Middleware
