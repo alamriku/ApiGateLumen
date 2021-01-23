@@ -31,4 +31,8 @@ class AuthorController extends Controller
     {
         return $this->successResponse($this->authorService->createAuthor($request->all(), Response::HTTP_CREATED));
     }
+    public function show($author)
+    {
+        return $this->successResponse($this->authorService->obtainAuthor($author));
+    }
 }
