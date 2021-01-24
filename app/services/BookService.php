@@ -11,9 +11,13 @@ class BookService
     //The base uri to consume the books services
     public $baseUri;
 
+    //the secret consume the books service
+    public $secret;
+
     public function __construct()
     {
         $this->baseUri = config('services.books.base_uri');
+        $this->secret = config('services.books.secret');
     }
 
     // obtain full list of books from the other service

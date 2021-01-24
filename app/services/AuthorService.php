@@ -12,9 +12,13 @@ class AuthorService
     //The base uri to consume the authors services
     public $baseUri;
 
+    //the secret consume the authors service
+    public $secret;
+
     public function __construct()
     {
         $this->baseUri = config('services.authors.base_uri');
+        $this->secret = config('services.authors.secret');
     }
 
     // obtain full list of authors from the other service
